@@ -17,27 +17,18 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         bind = DataBindingUtil.setContentView(this,R.layout.activity_main)
 
-        val intent = getIntent()
-        var name = intent.getStringExtra("Name")
-        var seen = intent.getStringExtra("Seen")
-
-        data.name = name.toString()
-        bind.textAct1.text = data.name
-
-
-        if(seen == "true"){
-            data.seen = true
-        }
-
-        if(data.seen == true){
-            bind.textAct1.visibility = View.VISIBLE
-        }
-
-
         bind.butAct1.setOnClickListener{
             moveToActivity()
         }
 
+    }
+
+    override fun onResume() {
+        bind.textAct1.text = data.name
+        if (data.seen == true){
+            bind.textAct1.visibility = View.VISIBLE
+        }
+        super.onResume()
     }
 
     private fun moveToActivity(){

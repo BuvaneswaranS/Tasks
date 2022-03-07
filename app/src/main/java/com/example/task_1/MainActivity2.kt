@@ -23,6 +23,7 @@ class MainActivity2 : AppCompatActivity() {
     }
 
     private fun moveBack(){
+
         if(bind.editData.text.equals("")){
 
         }else {
@@ -30,13 +31,12 @@ class MainActivity2 : AppCompatActivity() {
             dat.seen = true
             Log.i("TestingApp", "${dat.name} ++ ${dat.seen}")
         }
-
-        val intent = Intent(this, MainActivity::class.java)
-        intent.putExtra("Name","${dat.name}")
-        intent.putExtra("Seen","${dat.seen}")
-        startActivity(intent)
+        finish()
 
     }
 
+    override fun finish() {
+        super.finish()
+    }
 
 }
