@@ -3,7 +3,7 @@
 <layout>
     <data>
         <variable
-            name="info"
+            name="Data"
             type="com.example.task_1.Data" />
     </data>
 
@@ -50,6 +50,7 @@
             android:textAlignment="center"
             android:textSize="20sp"
             android:visibility="gone"
+            android:text="@{Data.name}"
             app:layout_constraintBottom_toTopOf="@+id/but_act1"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
