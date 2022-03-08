@@ -36,7 +36,7 @@ class MainActivity2 : AppCompatActivity() {
             setResult(78, intent)
             Log.i("TestingApp","${intent.dataString}")
             Log.i("TestingApp","${res}")
-            super.onBackPressed()
+            finish()
         }
     }
 }
